@@ -5,6 +5,12 @@
 {% block content %}
 <br>
 <div class="row">
+    <form class="input-group mb-3" action= "{% url 'restaurant-list'%}" >
+  <input type="text" class="form-control" placeholder="" aria-label="search" name = "q" value="{{request.GET.q}}">
+    <div class="input-group-append">
+    <button class="btn btn-outline-secondary" type ="submit">search </button> 
+    </div>
+        </form>
     {% for restaurant in restaurants %}
     <div class="col-md-4">
         <div class="card my-card">
